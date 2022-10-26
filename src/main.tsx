@@ -1,6 +1,6 @@
 // Copyright 2018-present the xiejiahe. All rights reserved. MIT license.
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import './assets/styles/global.scss'
 import 'antd/dist/antd.css'
 import AppRoute from './router'
@@ -13,14 +13,13 @@ import store from '@/store'
 
 moment.locale('zh-cn')
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('tomato-work-root'))
+root.render(
   // <React.StrictMode>
-    <Provider store={store}>
-      <ConfigProvider locale={zh_CN}>
-        <AppRoute />
-      </ConfigProvider>
-    </Provider>
+  <Provider store={store}>
+    <ConfigProvider locale={zh_CN}>
+      <AppRoute />
+    </ConfigProvider>
+  </Provider>
   // </React.StrictMode>
-  ,
-  document.getElementById('tomato-work-root')
 )
