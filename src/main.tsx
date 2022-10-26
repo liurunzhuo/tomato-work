@@ -15,11 +15,9 @@ moment.locale('zh-cn')
 
 const root = createRoot(document.getElementById('tomato-work-root') as HTMLElement)
 root.render(
-  // <React.StrictMode>
   <Provider store={store}>
     <ConfigProvider locale={zh_CN}>
       <AppRoute />
     </ConfigProvider>
   </Provider>
-  // </React.StrictMode>
 )
