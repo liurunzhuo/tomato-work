@@ -13,7 +13,7 @@ import store from '@/store'
 
 moment.locale('zh-cn')
 
-const root = createRoot(document.getElementById('tomato-work-root'))
+const root = createRoot(document.getElementById('tomato-work-root') as HTMLElement)
 root.render(
   // <React.StrictMode>
   <Provider store={store}>
